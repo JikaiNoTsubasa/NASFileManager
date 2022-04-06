@@ -48,5 +48,22 @@
         "modifiedDate": "May 26, 2021, 8:52:51 AM"
       }
     ]
+  },
+  "api-docs.yaml": {
+    "name": "api-docs.yaml",
+    "paths": [
+      {
+        "path": "C:\\SBI\\test\\20220405\\api-docs.yaml",
+        "size": 394,
+        "creationDate": "Apr 6, 2022, 2:23:28 PM",
+        "modifiedDate": "Apr 6, 2022, 2:10:02 PM"
+      },
+      {
+        "path": "C:\\SBI\\test\\20220406\\api-docs.yaml",
+        "size": 394,
+        "creationDate": "Apr 6, 2022, 2:23:25 PM",
+        "modifiedDate": "Apr 6, 2022, 2:10:02 PM"
+      }
+    ]
   }
 }

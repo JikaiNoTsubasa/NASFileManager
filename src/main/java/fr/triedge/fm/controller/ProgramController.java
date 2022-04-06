@@ -117,7 +117,7 @@ public class ProgramController {
             updateProgressBar(true);
             updateStatusLabel("Loading indexes...");
             getModel().setFileInfos(Storage.loadIndexes(file.getPath()));
-            updateStatusLabel("Loaded "+getModel().getFileInfos().size()+" indexes");
+            updateStatusLabel("Loaded "+getModel().getDuplicatesFileInfos().size()+" indexes");
             log.debug("Loaded "+getModel().getFileInfos().size()+" indexes");
             updateProgressBar(false);
         }

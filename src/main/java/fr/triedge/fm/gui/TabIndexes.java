@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreePath;
 import javax.swing.tree.TreeSelectionModel;
 import java.awt.*;
 
@@ -26,7 +27,6 @@ public class TabIndexes extends JPanel {
 
     public void refreshTree(){
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("Root");
-
         if (getController() != null){
             log.debug("Displaying tree with "+getController().getModel().getDuplicatesFileInfos().size()+" elements");
             getController().getModel().getDuplicatesFileInfos().forEach(e -> {
