@@ -6,6 +6,7 @@ import fr.triedge.fm.utils.Utils;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.tree.TreePath;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -15,6 +16,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 
 public class FileInfoComponent extends JPanel {
 
@@ -75,6 +77,34 @@ public class FileInfoComponent extends JPanel {
         toolBar.add(titleLabel);
         JButton btnDelete = new JButton("Delete");
         btnDelete.addActionListener(e -> {
+            int[] rows = table.getSelectedRows();
+            if (rows.length > 0){
+                String[] paths = new String[rows.length];
+                for (int i = 0; i < rows.length; ++i){
+                    paths[i] = table.getModel().getValueAt(rows[i], 1).toString();
+                }
+                StringBuilder mess = new StringBuilder();
+                mess.append("Are you sure you want to delete the following files?\r\n");
+                Arrays.stream(paths).forEach(p -> mess.append(p).append("\r\n"));
+                if (UI.showYesNo(this, "Delete Files?", mess.toString())){
+                    for(String path : paths){
+                        try {
+                            boolean success = Files.deleteIfExists(Paths.get(path));
+                            if (success){
+                                getFileInfo().removePath(path);
+                                UI.showInfo(this, "INFO", "Successfully deleted\r\n"+path+"\r\nPlease re-index");
+                            }else{
+                                UI.showError(this, "ERROR", "Cannot delete file\r\n"+path);
+                            }
+                        } catch (IOException ex) {
+                            UI.showError(this, "ERROR", "Cannot delete file\r\n"+path+"\r\n"+ex.getMessage());
+                        }
+                    }
+                    getTabIndexes().getController().storeIndexes();
+                    getTabIndexes().refreshTree();
+                }
+            }
+            /*
             int rowId = table.getSelectedRow();
             if (rowId >= 0){
                 String selectedPath = table.getModel().getValueAt(rowId, 1).toString();
@@ -94,7 +124,7 @@ public class FileInfoComponent extends JPanel {
                         UI.showError(this, "ERROR", "Cannot delete file\r\n"+selectedPath+"\r\n"+ex.getMessage());
                     }
                 }
-            }
+            }*/
         });
         toolBar.add(new JSeparator());
         toolBar.add(btnDelete);
