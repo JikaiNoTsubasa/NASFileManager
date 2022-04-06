@@ -108,6 +108,12 @@ public class ProgramController {
         th.start();
     }
 
+    public void deleteBatch(){
+        Thread th = new Thread((new RunDeleteBatch(this)));
+        th.setName("DeleteBatch");
+        th.start();
+    }
+
     public void loadIndexes() throws FileNotFoundException {
         File file = new File(config.getProperty(CONF_INDEX));
         log.debug("Loading indexes from file "+file.getAbsolutePath());

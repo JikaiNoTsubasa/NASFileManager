@@ -30,7 +30,7 @@ public class RunIndexing implements Runnable{
         log.debug("Starting indexing...");
 
         indexCount = 0;
-        currentIndexing = 0;
+        currentIndexing = 1;
         File rootFile = new File(root);
 
         controller.updateProgressBar(true);

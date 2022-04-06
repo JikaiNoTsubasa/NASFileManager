@@ -74,6 +74,10 @@ public class MainWindow extends JFrame {
         });
         menuIndex.add(itemChangeIndexFolder);
 
+        JMenuItem itemRunDelete = new JMenuItem("Run Batch Delete");
+        itemRunDelete.addActionListener(e -> controller.deleteBatch());
+        menuIndex.add(itemRunDelete);
+
         JMenuItem itemClearIndex = new JMenuItem("Clear Indexes");
         itemClearIndex.addActionListener(e -> controller.clearIndexes());
         menuIndex.add(new JSeparator());

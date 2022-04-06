@@ -104,29 +104,7 @@ public class FileInfoComponent extends JPanel {
                     getTabIndexes().refreshTree();
                 }
             }
-            /*
-            int rowId = table.getSelectedRow();
-            if (rowId >= 0){
-                String selectedPath = table.getModel().getValueAt(rowId, 1).toString();
-                if (UI.showYesNo(this, "Delete File?", "Are you sure you want to delete the following?\r\n"+selectedPath)){
-                    //System.out.println("Delete: "+selectedPath);
-                    try {
-                        boolean success = Files.deleteIfExists(Paths.get(selectedPath));
-                        if (success){
-                            getFileInfo().removePath(selectedPath);
-                            getTabIndexes().getController().storeIndexes();
-                            getTabIndexes().refreshTree();
-                            UI.showInfo(this, "INFO", "Successfully deleted\r\n"+selectedPath+"\r\nPlease re-index");
-                        }else{
-                            UI.showError(this, "ERROR", "Cannot delete file\r\n"+selectedPath);
-                        }
-                    } catch (IOException ex) {
-                        UI.showError(this, "ERROR", "Cannot delete file\r\n"+selectedPath+"\r\n"+ex.getMessage());
-                    }
-                }
-            }*/
         });
-        toolBar.add(new JSeparator());
         toolBar.add(btnDelete);
         add(toolBar, BorderLayout.NORTH);
     }

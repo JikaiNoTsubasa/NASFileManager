@@ -2,7 +2,7 @@ package fr.triedge.fm.model;
 
 import java.util.Date;
 
-public class FilePath {
+public class FilePath implements Comparable<FilePath>{
 
     private String path;
     private long size;
@@ -39,5 +39,10 @@ public class FilePath {
 
     public void setModifiedDate(Date modifiedDate) {
         this.modifiedDate = modifiedDate;
+    }
+
+    @Override
+    public int compareTo(FilePath o) {
+        return this.getCreationDate().compareTo(o.getCreationDate());
     }
 }

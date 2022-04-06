@@ -7,12 +7,6 @@
         "size": 60268,
         "creationDate": "Apr 6, 2022, 9:59:28 AM",
         "modifiedDate": "May 26, 2021, 8:34:22 AM"
-      },
-      {
-        "path": "C:\\SBI\\test\\20220405 - Copy\\Screenshot_inex_12_2.png",
-        "size": 60268,
-        "creationDate": "Apr 6, 2022, 2:44:17 PM",
-        "modifiedDate": "May 26, 2021, 8:34:22 AM"
       }
     ]
   },
@@ -24,24 +18,12 @@
         "size": 13717,
         "creationDate": "Apr 6, 2022, 9:59:28 AM",
         "modifiedDate": "May 26, 2021, 8:39:02 AM"
-      },
-      {
-        "path": "C:\\SBI\\test\\20220405 - Copy\\Screenshot_inex_22.png",
-        "size": 13717,
-        "creationDate": "Apr 6, 2022, 2:44:17 PM",
-        "modifiedDate": "May 26, 2021, 8:39:02 AM"
       }
     ]
   },
   "Screenshot_inex_12_1.png": {
     "name": "Screenshot_inex_12_1.png",
     "paths": [
-      {
-        "path": "C:\\SBI\\test\\20220405\\Screenshot_inex_12_1.png",
-        "size": 50905,
-        "creationDate": "Apr 6, 2022, 9:59:28 AM",
-        "modifiedDate": "May 26, 2021, 8:33:37 AM"
-      },
       {
         "path": "C:\\SBI\\test\\20220406\\Screenshot_inex_12_1.png",
         "size": 50905,
@@ -58,12 +40,6 @@
         "size": 43201,
         "creationDate": "Apr 6, 2022, 9:59:28 AM",
         "modifiedDate": "May 26, 2021, 8:52:51 AM"
-      },
-      {
-        "path": "C:\\SBI\\test\\20220405 - Copy\\Screenshot_inex_160.png",
-        "size": 43201,
-        "creationDate": "Apr 6, 2022, 2:44:17 PM",
-        "modifiedDate": "May 26, 2021, 8:52:51 AM"
       }
     ]
   },
@@ -71,33 +47,9 @@
     "name": "api-docs.yaml",
     "paths": [
       {
-        "path": "C:\\SBI\\test\\20220405\\api-docs.yaml",
-        "size": 394,
-        "creationDate": "Apr 6, 2022, 2:23:28 PM",
-        "modifiedDate": "Apr 6, 2022, 2:10:02 PM"
-      },
-      {
         "path": "C:\\SBI\\test\\20220406\\api-docs.yaml",
         "size": 394,
         "creationDate": "Apr 6, 2022, 2:23:25 PM",
-        "modifiedDate": "Apr 6, 2022, 2:10:02 PM"
-      },
-      {
-        "path": "C:\\SBI\\test\\20220405 - Copy\\api-docs.yaml",
-        "size": 394,
-        "creationDate": "Apr 6, 2022, 2:44:17 PM",
-        "modifiedDate": "Apr 6, 2022, 2:10:02 PM"
-      },
-      {
-        "path": "C:\\SBI\\test\\20220406 - Copy\\api-docs.yaml",
-        "size": 394,
-        "creationDate": "Apr 6, 2022, 2:44:15 PM",
-        "modifiedDate": "Apr 6, 2022, 2:10:02 PM"
-      },
-      {
-        "path": "C:\\SBI\\test\\20220406 - Copy (2)\\api-docs.yaml",
-        "size": 394,
-        "creationDate": "Apr 6, 2022, 2:44:19 PM",
         "modifiedDate": "Apr 6, 2022, 2:10:02 PM"
       }
     ]
