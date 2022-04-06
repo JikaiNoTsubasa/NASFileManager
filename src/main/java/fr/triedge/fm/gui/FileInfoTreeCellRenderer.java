@@ -8,6 +8,13 @@ import javax.swing.tree.DefaultTreeCellRenderer;
 import java.awt.*;
 
 public class FileInfoTreeCellRenderer extends DefaultTreeCellRenderer {
+
+    public FileInfoTreeCellRenderer(){
+        setClosedIcon(new ImageIcon(getClass().getResource("/icon_folder_closed_24.png")));
+        setOpenIcon(new ImageIcon(getClass().getResource("/icon_folder_opened_24.png")));
+        setLeafIcon(new ImageIcon(getClass().getResource("/icon_document_24.png")));
+    }
+
     @Override
     public Component getTreeCellRendererComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row, boolean hasFocus) {
         DefaultMutableTreeNode node = (DefaultMutableTreeNode ) value;
