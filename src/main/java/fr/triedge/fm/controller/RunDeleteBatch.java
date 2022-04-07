@@ -1,5 +1,6 @@
 package fr.triedge.fm.controller;
 
+import fr.triedge.fm.gui.UI;
 import fr.triedge.fm.model.FileInfo;
 import fr.triedge.fm.model.FilePath;
 import org.apache.logging.log4j.LogManager;
@@ -18,6 +19,7 @@ public class RunDeleteBatch implements Runnable{
     private static final Logger log = LogManager.getLogger(RunDeleteBatch.class);
 
     private ProgramController controller;
+    private int totalRemovedCount = 0;
 
     public RunDeleteBatch(ProgramController controller){
         setController(controller);
@@ -42,6 +44,7 @@ public class RunDeleteBatch implements Runnable{
             log.debug("No files to delete");
         }
         log.debug("Delete batch finished");
+        UI.showInfo(getController().getMainWindow(), "Batch Removing Process", "Total removed files: "+totalRemovedCount);
     }
 
     private void removeDuplicatePaths(FileInfo info){
@@ -54,6 +57,7 @@ public class RunDeleteBatch implements Runnable{
                     if (success){
                         info.removePath(p.getPath());
                         log.debug("Removed "+p.getPath());
+                        totalRemovedCount++;
                     }
 
                 }
