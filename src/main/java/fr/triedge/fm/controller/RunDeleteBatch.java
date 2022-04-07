@@ -49,10 +49,13 @@ public class RunDeleteBatch implements Runnable{
         List<FilePath> paths = new ArrayList<FilePath>(info.getPaths().subList(1, info.getPaths().size()));
         paths.forEach(p -> {
             try {
-                boolean success = Files.deleteIfExists(Paths.get(p.getPath()));
-                if (success){
-                    info.removePath(p.getPath());
-                    log.debug("Removed "+p.getPath());
+                if (info.getPaths().size() >1){
+                    boolean success = Files.deleteIfExists(Paths.get(p.getPath()));
+                    if (success){
+                        info.removePath(p.getPath());
+                        log.debug("Removed "+p.getPath());
+                    }
+
                 }
             } catch (IOException e) {
                 log.error("Failed to remove "+p.getPath());
