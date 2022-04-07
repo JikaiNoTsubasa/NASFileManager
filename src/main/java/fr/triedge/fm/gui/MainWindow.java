@@ -13,7 +13,7 @@ public class MainWindow extends JFrame {
     private static final Logger log = LogManager.getLogger(MainWindow.class);
 
     private ProgramController controller;
-    private JTabbedPane tabbedPane;
+    private JTabbedPaneCloseButton tabbedPane;
     private JStatusBar statusBar;
 
     public MainWindow(ProgramController controller){
@@ -24,7 +24,7 @@ public class MainWindow extends JFrame {
     public void buildDefault(){
         JPanel pan = new JPanel(new BorderLayout());
         setContentPane(pan);
-        setTabbedPane(new JTabbedPane());
+        setTabbedPane(new JTabbedPaneCloseButton());
         pan.add(getTabbedPane(), JTabbedPane.CENTER);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         //setLocationRelativeTo(null);
@@ -97,11 +97,11 @@ public class MainWindow extends JFrame {
         getStatusBar().setText("Ready");
     }
 
-    public JTabbedPane getTabbedPane() {
+    public JTabbedPaneCloseButton getTabbedPane() {
         return tabbedPane;
     }
 
-    public void setTabbedPane(JTabbedPane tabbedPane) {
+    public void setTabbedPane(JTabbedPaneCloseButton tabbedPane) {
         this.tabbedPane = tabbedPane;
     }
 
