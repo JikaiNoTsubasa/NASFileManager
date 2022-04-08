@@ -18,7 +18,7 @@ public class Model {
     public ArrayList<FileInfo> getDuplicatesFileInfos(){
         ArrayList<FileInfo> array = new ArrayList<>();
         getFileInfos().forEach((k,v)->{
-            if (v.getPaths().size() >1)
+            if (v.getPaths().size() >1 && v.isAllSameSize())
                 array.add(v);
         });
         return array;

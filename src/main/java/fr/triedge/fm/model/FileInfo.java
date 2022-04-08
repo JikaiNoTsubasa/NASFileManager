@@ -45,6 +45,18 @@ public class FileInfo {
         }
     }
 
+    public boolean isAllSameSize(){
+        boolean res = true;
+        long size = getPaths().get(0).getSize();
+        for (FilePath p : getPaths()){
+            if (p.getSize() != size){
+                res = false;
+                break;
+            }
+        }
+        return res;
+    }
+
     public void removePath(String path){
         getPaths().removeIf(p -> p.getPath().equals(path));
     }
